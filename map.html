@@ -1,528 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- basic -->
-    <meta charset="utf-8" />
-    <!-- mobile metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-    <!-- site metas -->
-    <title>Ode mapa</title>
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- style css -->
-    <link rel="stylesheet" href="css/map.css" />
-    <!-- icon -->
-    <link rel="icon" href="images/categorias-clean.png" type="image/gif" />
-    <link
-      rel="stylesheet"
-      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/c814794cc9.js"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="js/maps.js"></script>
-  </head>
-  <!-- body -->
-  <body class="main-layout position_head">
-    <!-- header -->
-    <header>
-      <!-- header inner -->
-      <div class="header">
-        <div class="container-fluid">
-          <div class="colmd-12 my-2">
-            <div class="header__contents">
-              <a href="index.html"
-                ><img
-                  class="header__contents__logo"
-                  src="images/sga_logo_azul.png"
-                  alt=""
-              /></a>
 
-              <button class="btn info-btn">
-                <i
-                  class="fa-solid fa-info header__contents__info"
-                  aria-hidden="true"
-                ></i>
-              </button>
-            </div>
+<head>
+  <!-- basic -->
+  <meta charset="utf-8" />
+  <!-- mobile metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+  <!-- site metas -->
+  <title>Ode mapa</title>
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- style css -->
+  <link rel="stylesheet" href="css/map.css" />
+  <!-- icon -->
+  <link rel="icon" href="images/categorias-clean.png" type="image/gif" />
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://kit.fontawesome.com/c814794cc9.js" crossorigin="anonymous"></script>
+  <script type="module" src="js/maps.js"></script>
+</head>
+<!-- body -->
+
+<body>
+  <!-- header -->
+  <header>
+    <!-- header inner -->
+    <div class="header">
+      <div class="container-fluid">
+        <div class="colmd-12 my-2">
+          <div class="header__contents">
+            <a href="index.html"><img class="header__contents__logo" src="images/sga_logo_azul.png" alt="" /></a>
+
+            <button class="btn info-btn">
+              <i class="fa-solid fa-info header__contents__info" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
       </div>
-    </header>
-    <!-- end header inner -->
-    <!-- end header -->
-    <!-- map section -->
-    <div class="container-fluid pb-2">
-      <div id="map"></div>
     </div>
-    <section class="info__modal" id="map_info">
-      <div class="info__modal__wrapper animate__animated animate__fadeIn">
-        <div class="info__modal__wrapper__contents">
-          <p class="info__modal__wrapper__contents__about">
-            En esta sección podrás ver un mapa interactivo con diferentes
-            lugares de nuestro campus y el aporte que hacen el SGA y la UN en
-            estos lugares al cumplimiento de los ODS.
+  </header>
+  <!-- end header inner -->
+  <!-- end header -->
+  <!-- map section -->
+  <div class="container-fluid pb-2">
+    <div id="map"></div>
+  </div>
+  <section class="info__modal" id="map_info">
+    <div class="info__modal__wrapper animate__animated animate__fadeIn">
+      <div class="info__modal__wrapper__contents">
+        <p class="info__modal__wrapper__contents__about">
+          En esta sección podrás ver un mapa interactivo con diferentes
+          lugares de nuestro campus y el aporte que hacen el SGA y la UN en
+          estos lugares al cumplimiento de los ODS.
+        </p>
+        <i class="fa-regular fa-circle-xmark info__modal__wrapper__contents__close" aria-hidden="true"></i>
+      </div>
+    </div>
+  </section>
+  <section class="modal" id="urras">
+    <div class="modal__wrapper animate__animated animate__fadeIn">
+      <div class="modal__wrapper__contents">
+        <div class="modal__wrapper__contents__logo">
+          <img class="modal__wrapper__contents__logo__img" src="images/sga_logo_naranja.png" alt="" />
+          <i class="fa-regular fa-circle-xmark modal__wrapper__contents__logo__close" aria-hidden="true"></i>
+        </div>
+        <div class="modal__wrapper__contents__info">
+          <div class="modal__wrapper__contents__info__title">
+            Unidad de rescate y rehabilitacion de animales silvestres
+          </div>
+          <div class="d-flex justify-content-center">
+            <img src="images/urras.jpg" class="modal__wrapper__contents__info__img" alt="urrasimg" />
+          </div>
+
+          <p class="modal__wrapper__contents__info__about">
+            Recepción y rehabilitación de animales silvestres, consulta
+            externa y hospitalización de mascotas no convencionales,
+            capacitación de estudiantes en manejo de fauna silvestre,
+            investigaciones en fauna silvestre.
           </p>
-          <i
-            class="fa-regular fa-circle-xmark info__modal__wrapper__contents__close"
-            aria-hidden="true"
-          ></i>
+        </div>
+        <div class="modal__wrapper__contents__buttons">
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-around py-2">
+              <a class="btn play-btn disabled" id="urrasb"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdS1g7ehvn7lQWZyTn5713EilXPtFDm7i3rrAXYfrU7C4xmFw/viewform?usp=sf_link"
+                target="_blank" role="button">
+                <i class="fa-regular fa-circle-question"></i>&nbsp
+                <i class="fa-solid fa-award"></i> juega por premios!
+              </a>
+              <a class="btn contr-btn"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdlskLFrzxGyuE748dZjK4XLO0iGo5-Zz-D0dVQCl6iIkRQlw/viewform?usp=sf_link"
+                target="_blank" role="button">
+                <i class="fa-regular fa-heart">&nbsp</i><i class="fa-solid fa-earth-americas"></i> haz tu aporte!
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+              <button class="btn go-btn">ir a la ubicación</button>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center pt-2">
+            <small class="indicator">si quieres jugar, debes ir al lugar :)</small>
+          </div>
         </div>
       </div>
-    </section>
-    <section class="modal" id="urras">
-      <div class="modal__wrapper animate__animated animate__fadeIn">
-        <div class="modal__wrapper__contents">
-          <div class="modal__wrapper__contents__logo">
-            <img
-              class="modal__wrapper__contents__logo__img"
-              src="images/sga_logo_naranja.png"
-              alt=""
-            />
-            <i
-              class="fa-regular fa-circle-xmark modal__wrapper__contents__logo__close"
-              aria-hidden="true"
-            ></i>
+    </div>
+  </section>
+  <section class="modal" id="c_pequenos_animales">
+    <div class="modal__wrapper animate__animated animate__fadeIn">
+      <div class="modal__wrapper__contents">
+        <div class="modal__wrapper__contents__logo">
+          <img class="modal__wrapper__contents__logo__img" src="images/sga_logo_naranja.png" alt="" />
+          <i class="fa-regular fa-circle-xmark modal__wrapper__contents__logo__close" aria-hidden="true"></i>
+        </div>
+        <div class="modal__wrapper__contents__info">
+          <div class="modal__wrapper__contents__info__title">
+            Clínica de pequeños animales
           </div>
-          <div class="modal__wrapper__contents__info">
-            <div class="modal__wrapper__contents__info__title">
-              Unidad de rescate y rehabilitacion de animales silvestres
-            </div>
-            <div class="d-flex justify-content-center">
-              <img
-                src="images/urras.jpg"
-                class="modal__wrapper__contents__info__img"
-                alt="urrasimg"
-              />
-            </div>
+          <div class="d-flex justify-content-center">
+            <img src="images/clinica.jpg" class="modal__wrapper__contents__info__img" alt="clinica pequenos animales" />
+          </div>
 
-            <p class="modal__wrapper__contents__info__about">
-              Recepción y rehabilitación de animales silvestres, consulta
-              externa y hospitalización de mascotas no convencionales,
-              capacitación de estudiantes en manejo de fauna silvestre,
-              investigaciones en fauna silvestre.
-            </p>
+          <p class="modal__wrapper__contents__info__about">
+            La Clínica para Pequeños Animales de la Universidad Nacional de
+            Colombia es un centro universitario en donde se prestan servicios
+            médicos, quirúrgicos, hospitalarios y de diagnóstico a animales de
+            compañía, en particular a caninos y felinos.
+          </p>
+        </div>
+        <div class="modal__wrapper__contents__buttons">
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-around py-2">
+              <a class="btn play-btn disabled" id="c_pequenos_animalesb"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdS1g7ehvn7lQWZyTn5713EilXPtFDm7i3rrAXYfrU7C4xmFw/viewform?usp=sf_link"
+                target="_blank" role="button">
+                <i class="fa-regular fa-circle-question"></i>&nbsp
+                <i class="fa-solid fa-award"></i> juega por premios!
+              </a>
+              <a class="btn contr-btn"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdlskLFrzxGyuE748dZjK4XLO0iGo5-Zz-D0dVQCl6iIkRQlw/viewform?usp=sf_link"
+                target="_blank" role="button">
+                <i class="fa-regular fa-heart">&nbsp</i><i class="fa-solid fa-earth-americas"></i> haz tu aporte!
+              </a>
+            </div>
           </div>
-          <div class="modal__wrapper__contents__buttons">
-            <div class="row">
-              <div class="col-md-12 d-flex justify-content-around py-2">
-                <a
-                  class="btn play-btn disabled"
-                  id="urrasb"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdS1g7ehvn7lQWZyTn5713EilXPtFDm7i3rrAXYfrU7C4xmFw/viewform?usp=sf_link"
-                  target="_blank"
-                  role="button"
-                >
-                  <i class="fa-regular fa-circle-question"></i>&nbsp
-                  <i class="fa-solid fa-award"></i> juega por premios!
-                </a>
-                <a
-                  class="btn contr-btn"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdlskLFrzxGyuE748dZjK4XLO0iGo5-Zz-D0dVQCl6iIkRQlw/viewform?usp=sf_link"
-                  target="_blank"
-                  role="button"
-                >
-                  <i class="fa-regular fa-heart">&nbsp</i
-                  ><i class="fa-solid fa-earth-americas"></i> haz tu aporte!
-                </a>
-              </div>
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+              <button class="btn go-btn">ir a la ubicación</button>
             </div>
-            <div class="row">
-              <div class="col-md-12 d-flex justify-content-center">
-                <button class="btn go-btn">ir a la ubicación</button>
-              </div>
-            </div>
-            <div class="row d-flex justify-content-center pt-2">
-              <small class="indicator"
-                >si quieres jugar, debes ir al lugar :)</small
-              >
-            </div>
+          </div>
+          <div class="row d-flex justify-content-center pt-2">
+            <small class="indicator">si quieres jugar, debes ir al lugar :)</small>
           </div>
         </div>
       </div>
-    </section>
-    <section class="modal" id="c_pequenos_animales">
-      <div class="modal__wrapper animate__animated animate__fadeIn">
-        <div class="modal__wrapper__contents">
-          <div class="modal__wrapper__contents__logo">
-            <img
-              class="modal__wrapper__contents__logo__img"
-              src="images/sga_logo_naranja.png"
-              alt=""
-            />
-            <i
-              class="fa-regular fa-circle-xmark modal__wrapper__contents__logo__close"
-              aria-hidden="true"
-            ></i>
+    </div>
+  </section>
+  <section class="modal" id="centro_acoplo">
+    <div class="modal__wrapper animate__animated animate__fadeIn">
+      <div class="modal__wrapper__contents">
+        <div class="modal__wrapper__contents__logo">
+          <img class="modal__wrapper__contents__logo__img" src="images/sga_logo_naranja.png" alt="" />
+          <i class="fa-regular fa-circle-xmark modal__wrapper__contents__logo__close" aria-hidden="true"></i>
+        </div>
+        <div class="modal__wrapper__contents__info">
+          <div class="modal__wrapper__contents__info__title">
+            Centro de acoplo de residuos
           </div>
-          <div class="modal__wrapper__contents__info">
-            <div class="modal__wrapper__contents__info__title">
-              Clínica de pequeños animales
-            </div>
-            <div class="d-flex justify-content-center">
-              <img
-                src="images/clinica.jpg"
-                class="modal__wrapper__contents__info__img"
-                alt="clinica pequenos animales"
-              />
-            </div>
+          <div class="d-flex justify-content-center">
+            <img src="images/centro_acoplo.jpg" class="modal__wrapper__contents__info__img" alt="centroacoplo" />
+          </div>
 
-            <p class="modal__wrapper__contents__info__about">
-              La Clínica para Pequeños Animales de la Universidad Nacional de
-              Colombia es un centro universitario en donde se prestan servicios
-              médicos, quirúrgicos, hospitalarios y de diagnóstico a animales de
-              compañía, en particular a caninos y felinos.
-            </p>
+          <p class="modal__wrapper__contents__info__about">
+            La Oficina de Gestión Ambiental establece la línea base por unidad
+            generadora para los diferentes residuos generados en la sede a
+            través de mediciones cuantitativas en los centros de acopio, con
+            el fin de mejorar el desempeño ambiental de la sede y disminuir la
+            huella de carbono asociada.
+          </p>
+        </div>
+        <div class="modal__wrapper__contents__buttons">
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-around py-2">
+              <a class="btn play-btn disabled" id="centro_acoplob"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdS1g7ehvn7lQWZyTn5713EilXPtFDm7i3rrAXYfrU7C4xmFw/viewform?usp=sf_link"
+                target="_blank" role="button">
+                <i class="fa-regular fa-circle-question"></i>&nbsp
+                <i class="fa-solid fa-award"></i> juega por premios!
+              </a>
+              <a class="btn contr-btn"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdlskLFrzxGyuE748dZjK4XLO0iGo5-Zz-D0dVQCl6iIkRQlw/viewform?usp=sf_link"
+                target="_blank" role="button">
+                <i class="fa-regular fa-heart">&nbsp</i><i class="fa-solid fa-earth-americas"></i> haz tu aporte!
+              </a>
+            </div>
           </div>
-          <div class="modal__wrapper__contents__buttons">
-            <div class="row">
-              <div class="col-md-12 d-flex justify-content-around py-2">
-                <a
-                  class="btn play-btn disabled"
-                  id="c_pequenos_animalesb"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdS1g7ehvn7lQWZyTn5713EilXPtFDm7i3rrAXYfrU7C4xmFw/viewform?usp=sf_link"
-                  target="_blank"
-                  role="button"
-                >
-                  <i class="fa-regular fa-circle-question"></i>&nbsp
-                  <i class="fa-solid fa-award"></i> juega por premios!
-                </a>
-                <a
-                  class="btn contr-btn"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdlskLFrzxGyuE748dZjK4XLO0iGo5-Zz-D0dVQCl6iIkRQlw/viewform?usp=sf_link"
-                  target="_blank"
-                  role="button"
-                >
-                  <i class="fa-regular fa-heart">&nbsp</i
-                  ><i class="fa-solid fa-earth-americas"></i> haz tu aporte!
-                </a>
-              </div>
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+              <button class="btn go-btn">ir a la ubicación</button>
             </div>
-            <div class="row">
-              <div class="col-md-12 d-flex justify-content-center">
-                <button class="btn go-btn">ir a la ubicación</button>
-              </div>
-            </div>
-            <div class="row d-flex justify-content-center pt-2">
-              <small class="indicator"
-                >si quieres jugar, debes ir al lugar :)</small
-              >
-            </div>
+          </div>
+          <div class="row d-flex justify-content-center pt-2">
+            <small class="indicator">si quieres jugar, debes ir al lugar :)</small>
           </div>
         </div>
       </div>
-    </section>
-    <section class="modal" id="centro_acoplo">
-      <div class="modal__wrapper animate__animated animate__fadeIn">
-        <div class="modal__wrapper__contents">
-          <div class="modal__wrapper__contents__logo">
-            <img
-              class="modal__wrapper__contents__logo__img"
-              src="images/sga_logo_naranja.png"
-              alt=""
-            />
-            <i
-              class="fa-regular fa-circle-xmark modal__wrapper__contents__logo__close"
-              aria-hidden="true"
-            ></i>
+    </div>
+  </section>
+  <section class="modal" id="lab_ing_amb">
+    <div class="modal__wrapper animate__animated animate__fadeIn">
+      <div class="modal__wrapper__contents">
+        <div class="modal__wrapper__contents__logo">
+          <img class="modal__wrapper__contents__logo__img" src="images/sga_logo_naranja.png" alt="" />
+          <i class="fa-regular fa-circle-xmark modal__wrapper__contents__logo__close" aria-hidden="true"></i>
+        </div>
+        <div class="modal__wrapper__contents__info">
+          <div class="modal__wrapper__contents__info__title">
+            Oficina de gestión ambiental
           </div>
-          <div class="modal__wrapper__contents__info">
-            <div class="modal__wrapper__contents__info__title">
-              Centro de acoplo de residuos
-            </div>
-            <div class="d-flex justify-content-center">
-              <img
-                src="images/centro_acoplo.jpg"
-                class="modal__wrapper__contents__info__img"
-                alt="centroacoplo"
-              />
-            </div>
+          <div class="d-flex justify-content-center">
+            <img src="images/oga.jpg" class="modal__wrapper__contents__info__img" alt="oga" />
+          </div>
 
-            <p class="modal__wrapper__contents__info__about">
-              La Oficina de Gestión Ambiental establece la línea base por unidad
-              generadora para los diferentes residuos generados en la sede a
-              través de mediciones cuantitativas en los centros de acopio, con
-              el fin de mejorar el desempeño ambiental de la sede y disminuir la
-              huella de carbono asociada.
-            </p>
+          <p class="modal__wrapper__contents__info__about">
+            Busca incorporar la dimensión Ambiental en la sede Bogotá, tanto
+            en el cumplimiento de sus funciones misionales como en los
+            procesos de apoyo y gestión, por medio de acciones de educación,
+            apropiación, prevención, mitigación, control y compensación de
+            aspectos ambientales para el cumplimiento de requisitos legales en
+            el marco de los ODS.
+          </p>
+        </div>
+        <div class="modal__wrapper__contents__buttons">
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-around py-2">
+              <a class="btn play-btn disabled" id="lab_ing_ambb"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdS1g7ehvn7lQWZyTn5713EilXPtFDm7i3rrAXYfrU7C4xmFw/viewform?usp=sf_link"
+                target="_blank" role="button">
+                <i class="fa-regular fa-circle-question"></i>&nbsp
+                <i class="fa-solid fa-award"></i> juega por premios!
+              </a>
+              <a class="btn contr-btn"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdlskLFrzxGyuE748dZjK4XLO0iGo5-Zz-D0dVQCl6iIkRQlw/viewform?usp=sf_link"
+                target="_blank" role="button">
+                <i class="fa-regular fa-heart">&nbsp</i><i class="fa-solid fa-earth-americas"></i> haz tu aporte!
+              </a>
+            </div>
           </div>
-          <div class="modal__wrapper__contents__buttons">
-            <div class="row">
-              <div class="col-md-12 d-flex justify-content-around py-2">
-                <a
-                  class="btn play-btn disabled"
-                  id="centro_acoplob"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdS1g7ehvn7lQWZyTn5713EilXPtFDm7i3rrAXYfrU7C4xmFw/viewform?usp=sf_link"
-                  target="_blank"
-                  role="button"
-                >
-                  <i class="fa-regular fa-circle-question"></i>&nbsp
-                  <i class="fa-solid fa-award"></i> juega por premios!
-                </a>
-                <a
-                  class="btn contr-btn"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdlskLFrzxGyuE748dZjK4XLO0iGo5-Zz-D0dVQCl6iIkRQlw/viewform?usp=sf_link"
-                  target="_blank"
-                  role="button"
-                >
-                  <i class="fa-regular fa-heart">&nbsp</i
-                  ><i class="fa-solid fa-earth-americas"></i> haz tu aporte!
-                </a>
-              </div>
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+              <button class="btn go-btn">ir a la ubicación</button>
             </div>
-            <div class="row">
-              <div class="col-md-12 d-flex justify-content-center">
-                <button class="btn go-btn">ir a la ubicación</button>
-              </div>
-            </div>
-            <div class="row d-flex justify-content-center pt-2">
-              <small class="indicator"
-                >si quieres jugar, debes ir al lugar :)</small
-              >
-            </div>
+          </div>
+          <div class="row d-flex justify-content-center pt-2">
+            <small class="indicator">si quieres jugar, debes ir al lugar :)</small>
           </div>
         </div>
       </div>
-    </section>
-    <section class="modal" id="lab_ing_amb">
-      <div class="modal__wrapper animate__animated animate__fadeIn">
-        <div class="modal__wrapper__contents">
-          <div class="modal__wrapper__contents__logo">
-            <img
-              class="modal__wrapper__contents__logo__img"
-              src="images/sga_logo_naranja.png"
-              alt=""
-            />
-            <i
-              class="fa-regular fa-circle-xmark modal__wrapper__contents__logo__close"
-              aria-hidden="true"
-            ></i>
+    </div>
+  </section>
+  <section class="modal" id="inst_genetica">
+    <div class="modal__wrapper animate__animated animate__fadeIn">
+      <div class="modal__wrapper__contents">
+        <div class="modal__wrapper__contents__logo">
+          <img class="modal__wrapper__contents__logo__img" src="images/sga_logo_naranja.png" alt="" />
+          <i class="fa-regular fa-circle-xmark modal__wrapper__contents__logo__close" aria-hidden="true"></i>
+        </div>
+        <div class="modal__wrapper__contents__info">
+          <div class="modal__wrapper__contents__info__title">
+            Instituto de Genética
           </div>
-          <div class="modal__wrapper__contents__info">
-            <div class="modal__wrapper__contents__info__title">
-              Oficina de gestión ambiental
-            </div>
-            <div class="d-flex justify-content-center">
-              <img
-                src="images/oga.jpg"
-                class="modal__wrapper__contents__info__img"
-                alt="oga"
-              />
-            </div>
+          <div class="d-flex justify-content-center">
+            <img src="images/genetica.jpg" class="modal__wrapper__contents__info__img" alt="edificio genetica" />
+          </div>
 
-            <p class="modal__wrapper__contents__info__about">
-              Busca incorporar la dimensión Ambiental en la sede Bogotá, tanto
-              en el cumplimiento de sus funciones misionales como en los
-              procesos de apoyo y gestión, por medio de acciones de educación,
-              apropiación, prevención, mitigación, control y compensación de
-              aspectos ambientales para el cumplimiento de requisitos legales en
-              el marco de los ODS.
-            </p>
+          <p class="modal__wrapper__contents__info__about">
+            Mantiene una política de cooperación científica con grupos e
+            instituciones a nivel nacional e internacional mediante la
+            formulación de proyectos colaborativos, intercambio de
+            información, asistencia a eventos internacionales y pasantías de
+            los investigadores.
+          </p>
+        </div>
+        <div class="modal__wrapper__contents__buttons">
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-around py-2">
+              <a class="btn play-btn disabled" id="inst_geneticab"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdS1g7ehvn7lQWZyTn5713EilXPtFDm7i3rrAXYfrU7C4xmFw/viewform?usp=sf_link"
+                target="_blank" role="button">
+                <i class="fa-regular fa-circle-question"></i>&nbsp
+                <i class="fa-solid fa-award"></i> juega por premios!
+              </a>
+              <a class="btn contr-btn"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdlskLFrzxGyuE748dZjK4XLO0iGo5-Zz-D0dVQCl6iIkRQlw/viewform?usp=sf_link"
+                target="_blank" role="button">
+                <i class="fa-regular fa-heart">&nbsp</i><i class="fa-solid fa-earth-americas"></i> haz tu aporte!
+              </a>
+            </div>
           </div>
-          <div class="modal__wrapper__contents__buttons">
-            <div class="row">
-              <div class="col-md-12 d-flex justify-content-around py-2">
-                <a
-                  class="btn play-btn disabled"
-                  id="lab_ing_ambb"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdS1g7ehvn7lQWZyTn5713EilXPtFDm7i3rrAXYfrU7C4xmFw/viewform?usp=sf_link"
-                  target="_blank"
-                  role="button"
-                >
-                  <i class="fa-regular fa-circle-question"></i>&nbsp
-                  <i class="fa-solid fa-award"></i> juega por premios!
-                </a>
-                <a
-                  class="btn contr-btn"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdlskLFrzxGyuE748dZjK4XLO0iGo5-Zz-D0dVQCl6iIkRQlw/viewform?usp=sf_link"
-                  target="_blank"
-                  role="button"
-                >
-                  <i class="fa-regular fa-heart">&nbsp</i
-                  ><i class="fa-solid fa-earth-americas"></i> haz tu aporte!
-                </a>
-              </div>
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+              <button class="btn go-btn">ir a la ubicación</button>
             </div>
-            <div class="row">
-              <div class="col-md-12 d-flex justify-content-center">
-                <button class="btn go-btn">ir a la ubicación</button>
-              </div>
-            </div>
-            <div class="row d-flex justify-content-center pt-2">
-              <small class="indicator"
-                >si quieres jugar, debes ir al lugar :)</small
-              >
-            </div>
+          </div>
+          <div class="row d-flex justify-content-center pt-2">
+            <small class="indicator">si quieres jugar, debes ir al lugar :)</small>
           </div>
         </div>
       </div>
-    </section>
-    <section class="modal" id="inst_genetica">
-      <div class="modal__wrapper animate__animated animate__fadeIn">
-        <div class="modal__wrapper__contents">
-          <div class="modal__wrapper__contents__logo">
-            <img
-              class="modal__wrapper__contents__logo__img"
-              src="images/sga_logo_naranja.png"
-              alt=""
-            />
-            <i
-              class="fa-regular fa-circle-xmark modal__wrapper__contents__logo__close"
-              aria-hidden="true"
-            ></i>
+    </div>
+  </section>
+  <section class="modal" id="biblio_central">
+    <div class="modal__wrapper animate__animated animate__fadeIn">
+      <div class="modal__wrapper__contents">
+        <div class="modal__wrapper__contents__logo">
+          <img class="modal__wrapper__contents__logo__img" src="images/sga_logo_naranja.png" alt="" />
+          <i class="fa-regular fa-circle-xmark modal__wrapper__contents__logo__close" aria-hidden="true"></i>
+        </div>
+        <div class="modal__wrapper__contents__info">
+          <div class="modal__wrapper__contents__info__title">
+            Biblioteca Gabriel Garcia Marquez
           </div>
-          <div class="modal__wrapper__contents__info">
-            <div class="modal__wrapper__contents__info__title">
-              Instituto de Genética
-            </div>
-            <div class="d-flex justify-content-center">
-              <img
-                src="images/genetica.jpg"
-                class="modal__wrapper__contents__info__img"
-                alt="edificio genetica"
-              />
-            </div>
+          <div class="d-flex justify-content-center">
+            <img src="images/Biblioteca_UNAL.JPG" class="modal__wrapper__contents__info__img" alt="bibliotecacentral" />
+          </div>
 
-            <p class="modal__wrapper__contents__info__about">
-              Mantiene una política de cooperación científica con grupos e
-              instituciones a nivel nacional e internacional mediante la
-              formulación de proyectos colaborativos, intercambio de
-              información, asistencia a eventos internacionales y pasantías de
-              los investigadores.
-            </p>
+          <p class="modal__wrapper__contents__info__about">
+            Busca ser el centro de recursos y servicios que garanticen a la
+            comunidad académica el acceso a la información de calidad para
+            apoyar la creación artística y la innovación científica.
+          </p>
+        </div>
+        <div class="modal__wrapper__contents__buttons">
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-around py-2">
+              <a class="btn play-btn disabled" id="biblio_centralb"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdS1g7ehvn7lQWZyTn5713EilXPtFDm7i3rrAXYfrU7C4xmFw/viewform?usp=sf_link"
+                target="_blank" role="button">
+                <i class="fa-regular fa-circle-question"></i>&nbsp
+                <i class="fa-solid fa-award"></i> juega por premios!
+              </a>
+              <a class="btn contr-btn"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdlskLFrzxGyuE748dZjK4XLO0iGo5-Zz-D0dVQCl6iIkRQlw/viewform?usp=sf_link"
+                target="_blank" role="button">
+                <i class="fa-regular fa-heart">&nbsp</i><i class="fa-solid fa-earth-americas"></i> haz tu aporte!
+              </a>
+            </div>
           </div>
-          <div class="modal__wrapper__contents__buttons">
-            <div class="row">
-              <div class="col-md-12 d-flex justify-content-around py-2">
-                <a
-                  class="btn play-btn disabled"
-                  id="inst_geneticab"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdS1g7ehvn7lQWZyTn5713EilXPtFDm7i3rrAXYfrU7C4xmFw/viewform?usp=sf_link"
-                  target="_blank"
-                  role="button"
-                >
-                  <i class="fa-regular fa-circle-question"></i>&nbsp
-                  <i class="fa-solid fa-award"></i> juega por premios!
-                </a>
-                <a
-                  class="btn contr-btn"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdlskLFrzxGyuE748dZjK4XLO0iGo5-Zz-D0dVQCl6iIkRQlw/viewform?usp=sf_link"
-                  target="_blank"
-                  role="button"
-                >
-                  <i class="fa-regular fa-heart">&nbsp</i
-                  ><i class="fa-solid fa-earth-americas"></i> haz tu aporte!
-                </a>
-              </div>
+          <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+              <button class="btn go-btn">ir a la ubicación</button>
             </div>
-            <div class="row">
-              <div class="col-md-12 d-flex justify-content-center">
-                <button class="btn go-btn">ir a la ubicación</button>
-              </div>
-            </div>
-            <div class="row d-flex justify-content-center pt-2">
-              <small class="indicator"
-                >si quieres jugar, debes ir al lugar :)</small
-              >
-            </div>
+          </div>
+          <div class="row d-flex justify-content-center pt-2">
+            <small class="indicator">si quieres jugar, debes ir al lugar :)</small>
           </div>
         </div>
       </div>
-    </section>
-    <section class="modal" id="biblio_central">
-      <div class="modal__wrapper animate__animated animate__fadeIn">
-        <div class="modal__wrapper__contents">
-          <div class="modal__wrapper__contents__logo">
-            <img
-              class="modal__wrapper__contents__logo__img"
-              src="images/sga_logo_naranja.png"
-              alt=""
-            />
-            <i
-              class="fa-regular fa-circle-xmark modal__wrapper__contents__logo__close"
-              aria-hidden="true"
-            ></i>
-          </div>
-          <div class="modal__wrapper__contents__info">
-            <div class="modal__wrapper__contents__info__title">
-              Biblioteca Gabriel Garcia Marquez
-            </div>
-            <div class="d-flex justify-content-center">
-              <img
-                src="images/Biblioteca_UNAL.JPG"
-                class="modal__wrapper__contents__info__img"
-                alt="bibliotecacentral"
-              />
-            </div>
+    </div>
+  </section>
+  <!-- end map section -->
+  <!--  footer -->
+  <footer>
+    <div class="footer__un">
+      <p class="footer__un__info">Universidad Nacional de Colombia</p>
+    </div>
+  </footer>
+  <!-- end footer -->
+  <!-- Javascript files-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <!-- google map js -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_J3pgYa9a_fpjJt6sTKVpxSvgBmv5gSU&callback=initMap"
+    defer></script>
+  <!-- end google map js -->
+</body>
 
-            <p class="modal__wrapper__contents__info__about">
-              Busca ser el centro de recursos y servicios que garanticen a la
-              comunidad académica el acceso a la información de calidad para
-              apoyar la creación artística y la innovación científica.
-            </p>
-          </div>
-          <div class="modal__wrapper__contents__buttons">
-            <div class="row">
-              <div class="col-md-12 d-flex justify-content-around py-2">
-                <a
-                  class="btn play-btn disabled"
-                  id="biblio_centralb"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdS1g7ehvn7lQWZyTn5713EilXPtFDm7i3rrAXYfrU7C4xmFw/viewform?usp=sf_link"
-                  target="_blank"
-                  role="button"
-                >
-                  <i class="fa-regular fa-circle-question"></i>&nbsp
-                  <i class="fa-solid fa-award"></i> juega por premios!
-                </a>
-                <a
-                  class="btn contr-btn"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdlskLFrzxGyuE748dZjK4XLO0iGo5-Zz-D0dVQCl6iIkRQlw/viewform?usp=sf_link"
-                  target="_blank"
-                  role="button"
-                >
-                  <i class="fa-regular fa-heart">&nbsp</i
-                  ><i class="fa-solid fa-earth-americas"></i> haz tu aporte!
-                </a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 d-flex justify-content-center">
-                <button class="btn go-btn">ir a la ubicación</button>
-              </div>
-            </div>
-            <div class="row d-flex justify-content-center pt-2">
-              <small class="indicator"
-                >si quieres jugar, debes ir al lugar :)</small
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end map section -->
-    <!--  footer -->
-    <footer>
-      <div class="footer__un">
-        <p class="footer__un__info">Universidad Nacional de Colombia</p>
-      </div>
-    </footer>
-    <!-- end footer -->
-    <!-- Javascript files-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <!-- google map js -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_J3pgYa9a_fpjJt6sTKVpxSvgBmv5gSU&callback=initMap"
-      defer
-    ></script>
-    <!-- end google map js -->
-  </body>
 </html>
