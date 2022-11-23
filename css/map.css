@@ -1,5 +1,3 @@
-/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
-
 /*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
 
 @import url("https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700");
@@ -12,6 +10,61 @@
  2) font-family: 'Poppins', sans-serif;
  ----------------------------------------*****/
 
+/* @font-face {
+  font-family: "Ancizars";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/ancizar/Ancizar\ Serif-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Ancizars";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/ancizar/Ancizar\ Serif-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Ancizars";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/ancizar/Ancizar\ Serif-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Ancizars";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/ancizar/Ancizar\ Serif-Extrabold.otf") format("opentype");
+} */
+@font-face {
+  font-family: "Ancizar";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/ancizar/Ancizar\ Sans-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Ancizar";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/ancizar/Ancizar\ Sans-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Ancizar";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/ancizar/Ancizar\ Sans-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Ancizar";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/ancizar/Ancizar\ Sans-Extrabold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Ancizar";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/ancizar/Ancizar\ Sans-Black.otf") format("opentype");
+}
+
 * {
   box-sizing: border-box !important;
 }
@@ -23,7 +76,7 @@ html {
 body {
   color: #666666;
   font-size: 14px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Ancizar";
   line-height: 1.80857;
   font-weight: normal;
 }
@@ -293,8 +346,8 @@ img {
 }
 
 .modal__wrapper__contents__info__title {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 700;
   line-height: 1.3rem;
   color: black;
   padding-bottom: 0.5rem;
@@ -309,7 +362,7 @@ img {
 .modal__wrapper__contents__info__about {
   margin-top: 0.5rem;
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1rem;
   color: black;
 }
@@ -326,7 +379,7 @@ img {
 
 .play-btn {
   text-decoration: none;
-  font-size: 0.6rem !important;
+  font-size: 0.7rem !important;
   background: rgba(121, 185, 67, 0.1);
   border: 1px solid #79b943;
   box-shadow: 0 0.3rem 4px rgba(0, 0, 0, 0.25);
@@ -334,7 +387,7 @@ img {
 
 .contr-btn {
   text-decoration: none;
-  font-size: 0.6rem !important;
+  font-size: 0.7rem !important;
   background: rgba(240, 134, 29, 0.1);
   border: 1px solid rgb(240, 134, 29);
   box-shadow: 0 0.3rem 4px rgba(0, 0, 0, 0.25);
@@ -342,7 +395,7 @@ img {
 
 .go-btn {
   text-decoration: none;
-  font-size: 0.6rem !important;
+  font-size: 0.8rem !important;
   color: white;
   background: black;
   box-shadow: 0 0.3rem 4px rgba(0, 0, 0, 0.25);
@@ -350,7 +403,7 @@ img {
 }
 
 .indicator {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   color: rgb(143, 143, 143);
 }
 
